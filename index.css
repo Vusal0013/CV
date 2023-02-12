@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+a{
+    color: #000;
+}
+a:active{
+    color: #000;
+}
+a:visited{
+    color: #000;
+}
+ul li{
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    
+}
+html{
+    font-size: 10px;
+    user-select: none;
+}
+
+body{
+    font-size: 1.6rem;
+}
+.background{
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 100rem;
+    min-height: 50rem;
+    margin: 5rem;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 3.5rem 5.5rem rgba(0, 0, 0, 0.2);
+}
+
+.container:first-child{
+    margin-bottom: 0;
+}
+
+.container .left-side {
+    background-color: #003147;
+    padding: 3rem;
+    width: 30%;
+}
+
+.container.resume .left-side__profile-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.container.resume .left-side__profile-text .img-box{
+    position: relative;
+    min-width: 10rem;
+    min-height: 10rem; /* heigth width duzelish olunacaq*/
+    max-width: 20rem;
+    max-height: 20rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.container.resume .left-side__profile-text .img-box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container.resume .left-side__profile-text .my-name,
+.container.resume .left-side__profile-text .my-profession
+{
+    color: #fff;
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+.container.resume .left-side__profile-text .my-profession {
+    font-size: calc(2.2rem *0.8);
+    font-weight: 300;
+}
+
+.container.resume .left-side .left-side__contact-info,
+.container.resume .left-side .left-side__education,
+.container.resume .left-side .left-side__language
+{
+    padding-top: 3rem;
+}
+
+.container.resume .left-side .title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+}
+
+.container.resume .left-side .contact-info__list li{
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.container.resume .left-side .contact-info__icon{
+    display: inline-block;
+    font-size: 1.8rem;
+    width: 2.2rem;
+    color: #03a9f4
+}
+
+.container.resume .left-side .contact-info__text{
+    padding-left: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.container.resume .left-side .education__list li{
+    margin-bottom: 1.5rem;
+}
+
+.container.resume .left-side .education__list h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+.container.resume .left-side .education__list h4:nth-child(2) {
+    color: #fff;
+    font-weight: 500;
+}
+
+.container.resume .left-side .education__list h4, .language__text {
+    color: #fff;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.container.resume .left-side .language__list li:not(.language__list li:first-child){
+    padding-top: 1.6rem;
+}
+
+.container.resume .left-side .language__percent-container{
+    position: relative;
+    width: 100%;
+    height: 0.6rem;
+    background: #081921;
+    margin-top: 0.5rem;
+}
+
+.container.resume .left-side .language__percent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #03a9f4;
+}
+
+.language__percent.azərbaycan-lang{
+    width: 98%;
+}
+.language__percent.english-lang{
+    width: 30%;
+}
+.language__percent.russian-lang{
+    width: 25%;
+}
+
+
+/* RIGHT SIDE */
+.container .right-side {
+    background-color: #fff;
+    padding: 4rem;
+    width: 70%;
+}
+
+.container.resume .right-side > *:not(.right-side > *:last-child){
+    margin-bottom: 5rem;
+}
+
+.container.resume .right-side .title {
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+}
+
+.container.resume .right-side__about div:not(div:last-child){
+    margin-bottom: 1.5rem;
+}
+
+.container.resume .right-side__about div{
+    color: #333;
+}
+
+.container.resume .experience__box{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0;
+}
+
+.container.resume .experience__year-company{
+    min-width: 16rem;
+    margin-right: 1rem;
+}
+
+.container.resume .experience__year-company h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+.container.resume .experience__text h4 {
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 1.6rem;
+}
+
+.container.resume .skills__box{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container.resume .skills__box:not(.skills__box:last-child){
+    margin-bottom: 2rem;
+}
+
+.container.resume .skills__box h4{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+    min-width: 15rem;
+}
+
+.container.resume .skills__percent-container{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+
+.container.resume .skills-percent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #03a9f4;
+}
+
+.skills-percent.html{
+    width: 90%;
+}
+.skills-percent.css{
+    width: 75%;
+}
+.skills-percent.javascript{
+    width: 70%;
+}
+.skills-percent.react{
+    width: 10%;
+}
+.skills-percent.autocad{
+    width: 80%;
+}
+
+.container.resume .hobbies-interest__items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    
+    gap: 2rem 4rem;
+}
+
+.container.resume .hobbies-interest__item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #fff; */
+    width: 12rem;
+    border-radius: 3rem;
+    box-shadow: inset 0px 0px 10px -5px #081921;
+    padding: 1rem;
+}
+
+.container.resume .hobbies-interest__item-container h4{
+    text-transform: uppercase;
+    text-align: center;
+    color: #848c99;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.container.resume .hobbies-interest__items .hobbies-interest__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 2rem; */
+    color: #03a9f4;
+    width: 8rem;
+    height: 8rem;
+    font-size: 5rem;
+    /* background-color: #03a9f4; */
+}
+
+/* Portofilio */
+
+.container.portofilio .left-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container.portofilio .left-side h1 {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.container.portofilio .right-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-flow: wrap;
+    gap: 2rem 2rem;
+}
+
+.container.portofilio .right-side .portofilio__card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    background-color: #f0f0f0;
+    width: 15rem;
+    height: 18rem;
+    /* padding: 2rem 1rem 1rem; */
+    border-radius: 2rem;
+    overflow: hidden;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png");
+    background-size: cover;
+}
+
+.container.portofilio .right-side .portofilio__card h4{
+    position: absolute;
+    bottom: 0;
+    padding: 1rem 1rem 0;
+    text-align: center;
+    color: #003147;
+    font-weight: 500;
+    font-size: 1.4rem;
+    background-color: rgba(240, 240, 240, 0.5);
+    /* z-index: 1; */
+    /* width: 100%; */
+}
+
+.container.portofilio .right-side .card__image{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(150, 150, 150, 0.5);
+    /* width: 10rem;
+    height: 10rem; */
+    /* background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png");
+    background-size: cover; */
+}
+
+@media print {
+    html{
+        font-size: 7.6px;
+    }
+
+    .container.portofilio{
+        display: none;
+    }
+    .container{
+        margin: 0;
+        width: 100vw;
+    }
+    .container.resume .hobbies-interest__item-container{
+        box-shadow: none;
+    }
+
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* html{
+        font-size: 5px;
+    } */
+
+    /* .container{
+        flex-direction: column;
+    }
+
+    .container .left-side{
+        width: 100%;
+    }
+
+    .container .right-side {
+        width: 100%;
+    } */
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+    html{
+        font-size: 9px;
+    }
+
+    .container{
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .container .left-side{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 3rem 2rem;
+    }
+
+    .container .right-side {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .container.resume .left-side__profile-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        /* border: none; */
+    }
+
+    /* .container.resume .left-side .left-side__contact-info,
+    .container.resume .left-side .left-side__education,
+    .container.resume .left-side .left-side__language
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 3rem;
+    } */
+    .container.resume .left-side .language__list{
+        width: 100%;
+    }
+    .container.resume .experience__box{
+        flex-direction: column;
+    }
+    .container.resume .experience__year-company{
+        padding-bottom: 0.5rem;
+    }
+
+    .container.resume .skills__box{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .title{
+        text-align: center;
+    }
+
+    .container.portofilio .left-side h1 {
+        writing-mode: horizontal-tb;
+        text-orientation: unset;
+        font-size: 5rem;
+        /* letter-spacing: 1rem;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 200; */
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (max-width: 768px) {
+    html{
+        font-size: 6px;
+    }
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    html{
+        font-size: 7px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
